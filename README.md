@@ -25,7 +25,7 @@ SELECT p.name [продукт], c.name [категория]
 FROM Products p
 JOIN ProdCat pc ON p.id = pc.products_id
 JOIN Category c ON c.id = pc.category_id
-ORDER BY prod.name;
+ORDER BY p.name;
 ```
 
 
