@@ -19,12 +19,12 @@ namespace AreaFigures
         /// <returns>Число х двойной точности с плавающей запятой, такое, что 0 ≤ x ≤System.Double.MaxValue</returns>
         public static double GetAreaTriangle(double Xside, double Yside, double Zside)
         {
-            Math.Abs(Xside);
-            Math.Abs(Yside);
-            Math.Abs(Zside);
+            double x = Math.Abs(Xside);
+            double y = Math.Abs(Yside);
+            double z = Math.Abs(Zside);
 
-            double P = (Xside + Yside + Zside) / 2;
-            return Math.Sqrt(P * (P - Xside) * (P - Yside) * (P - Zside));
+            double P = (x + y + z) / 2;
+            return Math.Sqrt(P * (P - x) * (P - y) * (P - z));
         }
 
         /// <summary>
@@ -35,10 +35,10 @@ namespace AreaFigures
         /// <returns>Число х двойной точности с плавающей запятой, такое, что 0 ≤ x ≤System.Double.MaxValue</returns>
         public static double GetAreaTriangle(double Xbase, double height)
         {
-            Math.Abs(Xbase);
-            Math.Abs(height);
+            double x = Math.Abs(Xbase);
+            double y = Math.Abs(height);
 
-            return (Xbase * height) / 2;
+            return (x * y) / 2;
         }
 
         /// <summary>
@@ -50,11 +50,11 @@ namespace AreaFigures
         /// <returns>Возращает true если треугольник прямоугольный, в противном случае false</returns>
         public static bool GetRightTriangle(double Xside, double Yside, double Zside)
         {
-            Math.Abs(Xside);
-            Math.Abs(Yside);
-            Math.Abs(Zside);
+            double x = Math.Abs(Xside);
+            double y = Math.Abs(Yside);
+            double z = Math.Abs(Zside);
 
-            return Math.Pow(Zside, 2) == Math.Pow(Xside, 2) + Math.Pow(Yside, 2);                            
+            return Math.Pow(z, 2) == Math.Pow(x, 2) + Math.Pow(y, 2);                            
         }
 
         /// <summary>
@@ -64,8 +64,8 @@ namespace AreaFigures
         /// <returns>Число х двойной точности с плавающей запятой, такое, что 0 ≤ x ≤System.Double.MaxValue</returns>
         public static double GetAreaCircle(double radius)
         {
-            Math.Abs(radius);
-            return PI * Math.Pow(radius, 2);
+            double r = Math.Abs(radius);
+            return PI * Math.Pow(r, 2);
         }
 
         /// <summary>
@@ -75,9 +75,9 @@ namespace AreaFigures
         /// <returns>Число х двойной точности с плавающей запятой, такое, что 0 ≤ x ≤System.Double.MaxValue</returns>
         public static double GetArea(double Xside)
         {
-            Math.Abs(Xside);
+            double x = Math.Abs(Xside);
 
-            return Math.Pow(Xside, 2);
+            return Math.Pow(x, 2);
         }
 
         /// <summary>
@@ -88,10 +88,10 @@ namespace AreaFigures
         /// <returns>Число х двойной точности с плавающей запятой, такое, что 0 ≤ x ≤System.Double.MaxValue</returns>
         public static double GetArea(double Xside, double Yside)
         {
-            Math.Abs(Xside);
-            Math.Abs(Yside);
+            double x = Math.Abs(Xside);
+            double y = Math.Abs(Yside);
 
-            return Xside * Yside;
+            return x * y;
         }
 
         /// <summary>
@@ -103,11 +103,11 @@ namespace AreaFigures
         /// <returns>Число х двойной точности с плавающей запятой, такое, что 0 ≤ x ≤System.Double.MaxValue</returns>
         public static double GetArea(double Xside, double Yside, double angle)
         {
-            Math.Abs(Xside);
-            Math.Abs(Yside);
-            Math.Abs(angle);
+            double x = Math.Abs(Xside);
+            double y = Math.Abs(Yside);
+            double a = Math.Abs(angle);
 
-            return Xside * Yside * Math.Sin(angle);
+            return x * y * Math.Sin(a);
         }
     }
 }
