@@ -54,7 +54,7 @@ namespace AreaFigures
             Math.Abs(Yside);
             Math.Abs(Zside);
 
-            return Math.Pow(Zside, 2) == Math.Pow(Xside, 2) + Math.Pow(Yside, 2) ? true : false;                            
+            return Math.Pow(Zside, 2) == Math.Pow(Xside, 2) + Math.Pow(Yside, 2);                            
         }
 
         /// <summary>
